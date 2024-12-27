@@ -8,8 +8,8 @@
   body {
     background-color: #f4f4f9;
     color: #333;
-    text-align: center;
     line-height: 1.6;
+    text-align: right;
   }
   
   /* ترويسة الموقع */
@@ -21,6 +21,7 @@
     width: 100%;
     top: 0;
     z-index: 1000;
+    text-align: center;
   }
   header h1 {
     font-size: 2rem;
@@ -115,6 +116,10 @@
     justify-content: right;
     gap: 20px;
     flex-wrap: wrap;
+    flex-direction: row-reverse; /* لجعل البطاقات تبدأ من اليمين */
+    justify-content: space-around;
+    align-items: flex-start;
+  }
   }
   .character-card {
     background-color: #fff;
