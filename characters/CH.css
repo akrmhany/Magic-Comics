@@ -11,7 +11,7 @@
     line-height: 1.6;
     text-align: right;
   }
-  
+
   /* ترويسة الموقع */
   header {
     background-color: #222;
@@ -124,7 +124,7 @@
     background-color: #fff;
     border: 1px solid #000000;
     border-radius: 8px;
-    width: 250px;
+    width: 200px;
     padding: 15px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
