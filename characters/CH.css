@@ -1,0 +1,128 @@
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  body {
+    background-color: #f4f4f9;
+    color: #333;
+    text-align: center;
+    line-height: 1.6;
+  }
+  
+  /* ترويسة الموقع */
+  header {
+    background-color: #222;
+    color: #fff;
+    padding: 15px 0;
+    position:static;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  nav a:hover {
+    color: #ff5252;
+  }
+  /* تذييل الموقع */
+  footer {
+    background-color: #222;
+    color: #fff;
+    padding: 10px;
+    position:relative;
+    bottom: 0;
+    width: 100%;
+  }
+  section {
+    padding: 20px;
+    text-align: right;
+  }
+#characters-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+  }
+  .character {
+    background-color: #eaeaea;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+  }
+  .character h3 {
+    color: #333;
+  }
+  .character-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 250px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.character-card img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+.character-card h3 {
+  color: #333;
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+.character-card p {
+  color: #666;
+  font-size: 0.9rem;
+}
+.character-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 250px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .character-card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  .character-card h3 {
+    color: #333;
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  .character-card p {
+    color: #666;
+    font-size: 0.9rem;
+  }
+  .characters-container {
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .character-card {
+    background-color: #fff;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    width: 250px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  

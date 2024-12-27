@@ -1,0 +1,49 @@
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  body {
+    background-color: #f4f4f9;
+    color: #333;
+    text-align: center;
+    line-height: 1.6;
+  }
+  
+  /* ترويسة الموقع */
+  header {
+    background-color: #222;
+    color: #fff;
+    padding: 15px 0;
+    position:static;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  nav a:hover {
+    color: #ff5252;
+  }
+  /* تذييل الموقع */
+  footer {
+    background-color: #222;
+    color: #fff;
+    padding: 10px;
+    position:relative;
+    bottom: 0;
+    width: 100%;
+  }
+  section {
+    padding: 20px;
+    text-align: right;
+  }
