@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header ul li {
+    margin: 0 15px;
+}
+
+header ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: #fff;
+}
+
+.hero img {
+    max-width: 200px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.hero-info {
+    max-width: 600px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  .stat {
+    text-align: center;
+  }
+  
+ .circle {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: conic-gradient(red 0% 0%, lightgray 0%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.circle::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: rgb(73, 72, 72);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.circle span {
+  position: relative;
+  z-index: 10; /* لضمان ظهور الرقم فوق الطبقات الأخرى */
+  font-size: 22px;
+  color: black;
+}
+
+
+.gallery {
+    padding: 20px;
+    background: #fff;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+.gallery h3 {
+    text-align: center;
+}
+
+.gallery .images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.gallery img {
+    max-width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
