@@ -21,11 +21,29 @@
         <img src="photos/ra-img.jpg" alt="شخصية رع">
         <div class="hero-info">
             <h2>رع</h2>
-            <p>رع هو شخصية ملحمية معروفة بقدرتها على التحكم في الضوء والنار. يُعتبر رمزًا للعدالة في مواجهة الظلام.</p>
+            <p>رع هو شخصية ملحمية معروف بقدرته المستمده من الاله المصريه القديمه . يُعتبر رمزًا للعدالة في مواجهة الظلام.</p>
             <button id="toggle-story">عرض القصة الكاملة</button>
             <p id="story" style="display:none;">كان رع حاميًا للأرض، وواجه أعداءً أقوياء باستخدام قواه النارية وقدرته على تحويل الظلام إلى نور.</p>
         </div>
     </section>
+
+    <div class="container">
+      <h3>التفاصيل</h3>
+      <div class="character-details">
+          <p><strong>الطول:</strong> 182 سم</p>
+          <p><strong>الوزن:</strong> 80 كجم</p>
+          <p><strong>العين:</strong> أسود</p>
+          <p><strong>الشعر:</strong> أسود</p>
+          <p><strong>الجنس:</strong> رجل</p>
+          <p><strong>الكون:</strong> Magic Comics Universe X101</p>
+          <p><strong>الأسماء:</strong> يوسف، رع</p>
+          <p><strong>التعليم:</strong> طالب جامعي كليه الاثار</p>
+          <p><strong>مكان المنشأ:</strong> مصر</p>
+          <p><strong>الهوية:</strong> سرية</p>
+          <p><strong>القدرات:</strong> قدرات مستمدة من الآلهة المصرية القديمة تحوت، سيت, أنوبيس, حورس, رع</p>
+          <p><strong>الانتماء للمجموعه:</strong>ا</p>
+      </div>
+  </div>
 
     <section id="abilities" class="stats">
         <div class="stats">
@@ -34,7 +52,7 @@
               <p>Durability</p>
             </div>
             <div class="stat">
-              <div class="circle" data-value="1"><span>1</span></div>
+              <div class="circle" data-value="9"><span>9</span></div>
               <p>Energy</p>
             </div>
             <div class="stat">
@@ -55,6 +73,78 @@
             </div>
           </div>                   
     </section>
+
+    <div class="comics-section" style="display: flex;
+    flex-wrap: wrap;
+    justify-content: right;">
+      <div class="search-bar">
+        <input type="text" id="search" placeholder="بحث عن قصة برقمها أو اسمها...">
+        <button onclick="searchComic()">بحث</button>
+    </div>
+      <div class="comics-grid" id="comics-grid" style="display: flex;
+      flex-wrap: wrap;
+      justify-content: right; flex-direction: row-reverse;">
+          <!-- Comic 1 -->
+          <div class="comic-item" data-title="ولادة رع" data-id="1">
+              <img src="photos/cover1.JPG" alt="غلاف القصة الأولى">
+              <a href="comic1.html">القصة الأولى: ولادة رع</a>
+          </div>
+          <!-- Comic 2 -->
+          <div class="comic-item" data-title="معركة مع أنوبيس" data-id="2">
+              <img src="comic2.png" alt="غلاف القصة الثانية">
+              <a href="comic2.html">القصة الثانية: معركة مع أنوبيس</a>
+          </div>
+          <!-- Comic 3 -->
+          <div class="comic-item" data-title="انتقام تحوت" data-id="3">
+              <img src="comic3.png" alt="غلاف القصة الثالثة">
+              <a href="comic3.html">القصة الثالثة: انتقام تحوت</a>
+          </div>
+          <div class="comic-item" data-title="انتقام تحوت" data-id="3">
+            <img src="comic3.png" alt="غلاف القصة الثالثة">
+            <a href="comic3.html">القصة الثالثة: انتقام تحوت</a>
+        </div>
+        <div class="comic-item" data-title="انتقام تحوت" data-id="3">
+          <img src="comic3.png" alt="غلاف القصة الثالثة">
+          <a href="comic3.html">القصة الثالثة: انتقام تحوت</a>
+      </div>
+      <div class="comic-item" data-title="انتقام تحوت" data-id="3">
+        <img src="comic3.png" alt="غلاف القصة الثالثة">
+        <a href="comic3.html">القصة الثالثة: انتقام تحوت</a>
+    </div>
+    <div class="comic-item" data-title="انتقام تحوت" data-id="3">
+      <img src="comic3.png" alt="غلاف القصة الثالثة">
+      <a href="comic3.html">القصة الثالثة: انتقام تحوت</a>
+  </div>
+  <div class="comic-item" data-title="انتقام تحوت" data-id="3">
+    <img src="comic3.png" alt="غلاف القصة الثالثة">
+    <a href="comic3.html">القصة الثالثة: انتقام تحوت</a>
+</div>
+<div class="comic-item" data-title="انتقام تحوت" data-id="3">
+  <img src="comic3.png" alt="غلاف القصة الثالثة">
+  <a href="comic3.html">القصة الثالثة: انتقام تحوت</a>
+</div>
+<div class="comic-item" data-title="انتقام تحوت" data-id="3">
+  <img src="comic3.png" alt="غلاف القصة الثالثة">
+  <a href="comic3.html">القصة الثالثة: انتقام تحوت</a>
+</div>
+<div class="comic-item" data-title="انتقام تحوت" data-id="3">
+  <img src="comic3.png" alt="غلاف القصة الثالثة">
+  <a href="comic3.html">القصة العاشره: انتقام تحوت</a>
+</div>
+<div class="comic-item" data-title="انتقام تحوت" data-id="3">
+  <img src="comic3.png" alt="غلاف القصة الثالثة">
+  <a href="comic3.html">القصة الثالثة: انتقام تحوت</a>
+</div>
+<div class="comic-item" data-title="انتقام تحوت" data-id="3">
+  <img src="comic3.png" alt="غلاف القصة الثالثة">
+  <a href="comic3.html">القصة الثالثة: انتقام تحوت</a>
+</div>
+      </div>
+      <nav class="pagination">
+          <button onclick="prevPage()">السابق</button>
+          <button onclick="nextPage()">التالي</button>
+      </nav>
+  </div>
 
     <section id="gallery" class="gallery">
         <h3>المعرض</h3>

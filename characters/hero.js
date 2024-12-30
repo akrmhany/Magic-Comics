@@ -29,4 +29,56 @@ document.querySelectorAll(".circle").forEach(circle => {
     circle.style.background = `conic-gradient(black ${percentage}%, lightgray ${percentage}%)`;
   });
   
-  
+  // خاصية البحث
+function searchComic() {
+    const query = document.getElementById('search').value.toLowerCase();
+    const comics = document.querySelectorAll('.comic-item');
+    
+    comics.forEach(comic => {
+        const title = comic.getAttribute('data-title').toLowerCase();
+        const id = comic.getAttribute('data-id');
+        
+        if (title.includes(query) || id.includes(query)) {
+            comic.style.display = "block";
+        } else {
+            comic.style.display = "none";
+        }
+    });
+}
+
+// شريط التنقل
+let currentPage = 1;
+const itemsPerPage = 6;
+
+function updatePagination() {
+    const comics = document.querySelectorAll('.comic-item');
+    const totalItems = comics.length;
+
+    comics.forEach((comic, index) => {
+        if (index >= (currentPage - 1) * itemsPerPage && index < currentPage * itemsPerPage) {
+            comic.style.display = "block";
+        } else {
+            comic.style.display = "none";
+        }
+    });
+}
+
+function nextPage() {
+    const comics = document.querySelectorAll('.comic-item');
+    const totalPages = Math.ceil(comics.length / itemsPerPage);
+    
+    if (currentPage < totalPages) {
+        currentPage++;
+        updatePagination();
+    }
+}
+
+function prevPage() {
+    if (currentPage > 1) {
+        currentPage--;
+        updatePagination();
+    }
+}
+
+// تحديث أولي
+updatePagination();

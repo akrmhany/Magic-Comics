@@ -14,6 +14,7 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
+    text-align: center;
   }
 
   header h1 {
@@ -28,6 +29,34 @@ header {
   nav a:hover {
     color: #ff5252;
   }
+  section {
+    padding: 20px;
+    text-align: right;
+  }
+
+  .container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+
+.character-details {
+    max-width: 350px;
+    padding: 15px;
+    background-color: white;
+    border: 3px solid #4d4b4b;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: right;
+}
+
+
+.character-details p {
+    margin: 10px 0;
+    line-height: 1.6;
+    color: #000000;
+}
 
 .hero {
     display: flex;
@@ -113,4 +142,86 @@ header {
     max-width: 200px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 5px;
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.search-bar button {
+  padding: 6px 10px;
+  font-size: 16px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #000000;
+}
+
+.comics-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.comic-item {
+  width: 200px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.comic-item:hover {
+  transform: scale(1.05);
+}
+
+.comic-item img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.comic-item a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.comic-item a:hover {
+  text-decoration: underline;
+}
+
+.pagination {
+  display: flex;
+  justify-content: right;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  font-size: 16px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background-color: #535353;
 }
