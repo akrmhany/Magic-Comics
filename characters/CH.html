@@ -16,30 +16,42 @@
       <a href="shop.html">المتجر</a>
     </nav>
   </header>
-    <h2>الشخصيات المميزة</h2><br>
+
+  <main>
+    <section id="search">
+      <input type="text" id="search-bar" placeholder="ابحث عن شخصية..." onkeyup="filterCharacters()">
+      <button onclick="filterCharacters()">بحث</button>
+    </section>
+
     <section id="characters-list">
-        <div class="characters-container">
-            <a href="ra.html"><div class="character-card">
-              <img src="photos/ra.JPG" alt="رع">
-              <h3>رع</h3>
-              <p>نبذة قصيرة عن الشخصية 1...</p>
-            </div></a>
-            <a href=""><div class="character-card">
-              <img src="photos/yin.jpg" alt="ين">
-              <h3>ين</h3>
-              <p>نبذة قصيرة عن الشخصية 2...</p>
-            </div></a>
-            <a href=""><div class="character-card">
-              <img src="character1.jpg" alt="اسم الشخصية 3">
-              <h3>اسم الشخصية 3</h3>
-              <p>نبذة قصيرة عن الشخصية 3...</p>
-            </div></a>
-          </div>          
-  </section>
+      <div class="characters-container">
+        <a href="ra.html" class="character-card-link">
+          <div class="character-card" data-name="رع" data-description="شخصية قوية مستوحاة من الأساطير المصرية">
+            <img src="photos/ra.JPG" alt="رع">
+            <h3>رع</h3>
+            <p>شخصية مستوحاة من الأساطير المصرية...</p>
+          </div>
+        </a>
+        <a href="yin.html" class="character-card-link">
+        <div class="character-card" data-name="ين" data-description="شخصية غامضة تتحكم بالظلال">
+          <img src="photos/yin.jpg" alt="ين">
+          <h3>ين</h3>
+          <p>شخصية غامضة تتحكم بالظلال...</p>
+        </div></a>
+        <!-- أضف شخصيات أخرى -->
+      </div>
+    </section>
+    
+    <section id="pagination">
+      <button onclick="prevPage()">السابق</button>
+      <button onclick="nextPage()">التالي</button>
+    </section>
+  </main>
+
   <footer>
     <p>&copy; 2024 Magic-Comics</p>
   </footer>
 
-  <script src="scripts.js"></script>
+  <script src="CH.js"></script>
 </body>
 </html>

@@ -225,3 +225,12 @@ header {
 .pagination button:hover {
   background-color: #535353;
 }
+
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 10px;
+  position:relative;
+  bottom: 0;
+  width: 100%;
+}

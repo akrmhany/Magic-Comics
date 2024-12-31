@@ -1,132 +1,106 @@
-/* إعدادات عامة */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-  }
-  body {
-    background-color: #f4f4f9;
-    color: #333;
-    line-height: 1.6;
-    text-align: right;
-  }
+body {
+  font-family: Arial, sans-serif;
+  direction: rtl;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
 
-  /* ترويسة الموقع */
-  header {
-    background-color: #222;
-    color: #fff;
-    padding: 15px 0;
-    position:static;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    text-align: center;
-  }
-  header h1 {
-    font-size: 2rem;
-  }
-  nav a {
-    color: #fff;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  nav a:hover {
-    color: #ff5252;
-  }
-  /* تذييل الموقع */
-  footer {
-    background-color: #222;
-    color: #fff;
-    padding: 10px;
-    position:relative;
-    bottom: 0;
-    width: 100%;
-  }
-  section {
-    padding: 20px;
-    text-align: right;
-  }
-#characters-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: right;
-  }
-  .character {
-    background-color: #eaeaea;
-    margin: 10px;
-    padding: 20px;
-    border-radius: 10px;
-    width: 250px;
-  }
-  .character h3 {
-    color: #333;
-  }
-  .character-card {
-  background-color: #fff;
+/* ترويسة الموقع */
+header {
+  background-color: #222;
+  color: #fff;
+  padding: 15px 0;
+  position:static;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  text-align: center;
+}
+header h1 {
+  font-size: 2rem;
+}
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  color: #706e6e;
+}
+
+#search {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#search-bar {
+  width: 60%;
+  padding: 10px;
+  font-size: 16px;
   border: 1px solid #ddd;
-  border-radius: 8px;
-  width: 250px;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #222;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.characters-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: flex-start;
+  padding: 0 15px;
+}
+
+.character-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.character-card-link:hover {
+  cursor: pointer;
+}
+
+
+.character-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 200px;
   padding: 15px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
 }
+
 .character-card img {
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 10px;
 }
-.character-card h3 {
-  color: #333;
-  font-size: 1.2rem;
-  margin: 10px 0;
+
+.character-card:hover {
+  transform: scale(1.05);
 }
-.character-card p {
-  color: #666;
-  font-size: 0.9rem;
+
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 10px;
+  position:relative;
+  bottom: 0;
+  width: 100%;
 }
-.character-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    width: 250px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  .character-card img {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    margin-bottom: 10px;
-  }
-  .character-card h3 {
-    color: #333;
-    font-size: 1.2rem;
-    margin: 10px 0;
-  }
-  .character-card p {
-    color: #666;
-    font-size: 0.9rem;
-  }
-  .characters-container {
-    display: flex;
-    justify-content: right;
-    gap: 20px;
-    flex-wrap: wrap;
-    flex-direction: row-reverse; /* لجعل البطاقات تبدأ من اليمين */
-    justify-content: space-around;
-    align-items: flex-start;
-  }
-  .character-card {
-    background-color: #fff;
-    border: 1px solid #000000;
-    border-radius: 8px;
-    width: 200px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
