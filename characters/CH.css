@@ -78,19 +78,30 @@ button:hover {
 
 
 .character-card {
-  background: #fff;
-  border: 1px solid #ddd;
+  width: 200px; /* عرض ثابت */
+  height: 300px; /* ارتفاع ثابت */
+  border: 1px solid #ccc;
   border-radius: 10px;
-  width: 200px;
-  padding: 15px;
+  overflow: hidden; /* للتأكد من عدم خروج المحتوى */
   text-align: center;
-  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f9f9f9;
 }
 
 .character-card img {
-  width: 100%;
-  border-radius: 10px;
+  width: 100%; /* يجعل الصورة بعرض البطاقة */
+  height: 200px; /* ارتفاع ثابت للصورة */
+  object-fit: cover; /* لضبط الصورة بحيث تملأ المساحة دون تشويه */
+  border-radius: 5px;
 }
+
+.character-card h3, .character-card p {
+  margin: 10px 0;
+}
+
 
 .character-card:hover {
   transform: scale(1.05);

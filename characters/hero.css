@@ -4,6 +4,7 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    text-align: center;
 }
 
 header {
@@ -45,9 +46,9 @@ header {
     max-width: 350px;
     padding: 15px;
     background-color: white;
-    border: 3px solid #4d4b4b;
+    border: 3px solid #000000;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px #000000;
     text-align: right;
 }
 
