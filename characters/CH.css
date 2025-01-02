@@ -6,28 +6,55 @@ body {
   padding: 0;
 }
 
-/* ترويسة الموقع */
+/* الرأسية */
 header {
-  background-color: #222;
+  background: #222;
   color: #fff;
-  padding: 15px 0;
-  position:static;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  text-align: center;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
 header h1 {
-  font-size: 2rem;
+  margin: 0;
 }
-nav a {
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
   color: #fff;
-  margin: 0 15px;
   text-decoration: none;
-  font-weight: bold;
+  padding: 5px 10px;
 }
-nav a:hover {
-  color: #706e6e;
+
+nav ul li a:hover {
+  background: #444;
+  border-radius: 5px;
+  color: #000000;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
 }
 
 #search {
@@ -43,6 +70,8 @@ nav a:hover {
   font-size: 16px;
   border: 1px solid #ddd;
   border-radius: 5px;
+  background: url('search-icon.png') no-repeat 10px center;
+  padding-left: 40px;
 }
 
 button {
@@ -114,4 +143,43 @@ footer {
   position:relative;
   bottom: 0;
   width: 100%;
+}
+
+/* تصميم متجاوب */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #222;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 20px;
+  }
+
+  section h2 {
+    font-size: 20px;
+  }
+
+  section p {
+    font-size: 14px;
+  }
 }

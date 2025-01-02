@@ -8,12 +8,15 @@
 </head>
 <body>
   <header>
-    <h1>Magic-Comics - الشخصيات</h1>
+    <h1>Magic-Comics</h1>
     <nav>
-      <a href="/home.html">الرئيسية</a>
-      <a href="comics.html">الكوميكس</a>
-      <a href="movies.html">الأفلام</a>
-      <a href="shop.html">المتجر</a>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <ul id="nav-links">
+        <li><a href="characters/CH.html">الشخصيات</a></li>
+        <li><a href="#comics">الكوميكس</a></li>
+        <li><a href="#movies">الأفلام</a></li>
+        <li><a href="#shop">المتجر</a></li>
+      </ul>
     </nav>
   </header>
 
@@ -26,28 +29,29 @@
     <section id="characters-list">
       <div class="characters-container">
         <a href="ra.html" class="character-card-link">
-          <div class="character-card" data-name="رع" data-description="شخصية قوية مستوحاة من الأساطير المصرية">
-            <img src="photos/ra.JPG" alt="رع">
+          <div class="character-card" data-aos="fade-up" data-name="رع" data-description="شخصية قوية مستوحاة من الأساطير المصرية">
+            <img src="photos/ra.JPG" alt="رع" loading="lazy">
             <h3>رع</h3>
             <p>شخصية مستوحاة من الأساطير المصرية...</p>
           </div>
         </a>
         <a href="yin.html" class="character-card-link">
-        <div class="character-card" data-name="ين" data-description="شخصية غامضة تتحكم بالظلال">
-          <img src="photos/yin.jpg" alt="ين">
-          <h3>ين</h3>
-          <p>شخصية غامضة تتحكم بالظلال...</p>
-        </div></a>
+          <div class="character-card" data-aos="fade-up" data-name="ين" data-description="شخصية غامضة تتحكم بالظلال">
+            <img src="photos/yin.jpg" alt="ين" loading="lazy">
+            <h3>ين</h3>
+            <p>شخصية غامضة تتحكم بالظلال...</p>
+          </div>
+        </a>
         <a href="dark_shadow.html" class="character-card-link">
-          <div class="character-card" data-name="دارك شادو" data-description="شخصية غامضة تتحكم بالظلال">
-            <img src="photos/dark.png" alt="دارك شادو">
+          <div class="character-card" data-aos="fade-up" data-name="دارك شادو" data-description="شخصية غامضة تتحكم بالظلال">
+            <img src="photos/dark.png" alt="دارك شادو" loading="lazy">
             <h3>دارك شادو</h3>
-            <p></p>
-          </div></a>
-        <!-- أضف شخصيات أخرى -->
+            <p>شخصية غامضة تتحكم بالظلال...</p>
+          </div>
+        </a>
       </div>
     </section>
-    
+
     <section id="pagination">
       <button onclick="prevPage()">السابق</button>
       <button onclick="nextPage()">التالي</button>
