@@ -1,237 +1,319 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    text-align: center;
+  font-family: Arial, sans-serif;
+  direction: rtl;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
 }
 
+/* الرأسية */
 header {
-    background-color: #222;
-    color: #fff;
-    padding: 15px 0;
-    position:static;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    text-align: center;
-  }
+  background: #222;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  header h1 {
-    font-size: 2rem;
-  }
-  nav a {
-    color: #fff;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  nav a:hover {
-    color: #706e6e;
-  }
-  section {
-    padding: 20px;
-    text-align: right;
-  }
+header h1 {
+  margin: 0;
+}
 
-  .container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+nav ul li a:hover {
+  background: #444;
+  border-radius: 5px;
+  color: #000000;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #222;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+section {
+  padding: 20px;
+  text-align: right;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: flex-start;
+  padding: 0 15px;
 }
 
 
 .character-details {
-    max-width: 350px;
-    padding: 15px;
-    background-color: white;
-    border: 3px solid #000000;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px #000000;
-    text-align: right;
+  max-width: 350px;
+  padding: 15px;
+  background-color: white;
+  border: 3px solid #000000;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px #000000;
+  text-align: right;
 }
 
 
 .character-details p {
-    margin: 10px 0;
-    line-height: 1.6;
-    color: #000000;
+  margin: 10px 0;
+  line-height: 1.6;
+  color: #000000;
 }
 
 .hero {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    background: #fff;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: #fff;
 }
 
 .hero img {
-    max-width: 200px;
-    margin-right: 20px;
-    border-radius: 10px;
+  max-width: 200px;
+  margin-right: 20px;
+  border-radius: 10px;
 }
 
 .hero-info {
-    max-width: 600px;
+  max-width: 600px;
 }
 
 .stats {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 20px;
-  }
-  
-  .stat {
-    text-align: center;
-  }
-  
- .circle {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: conic-gradient(red 0% 0%, lightgray 0%);
   display: flex;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  font-weight: bold;
-  color: black;
-  margin-bottom: 10px;
-  overflow: hidden;
+  margin: 20px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.circle {
+position: relative;
+width: 100px;
+height: 100px;
+border-radius: 50%;
+background: conic-gradient(red 0% 0%, lightgray 0%);
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 24px;
+font-weight: bold;
+color: black;
+margin-bottom: 10px;
+overflow: hidden;
 }
 
 .circle::after {
-  content: '';
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  background: rgb(73, 72, 72);
-  border-radius: 50%;
-  z-index: 1;
+content: '';
+position: absolute;
+width: 80px;
+height: 80px;
+background: rgb(73, 72, 72);
+border-radius: 50%;
+z-index: 1;
 }
 
 .circle span {
-  position: relative;
-  z-index: 10; /* لضمان ظهور الرقم فوق الطبقات الأخرى */
-  font-size: 22px;
-  color: black;
+position: relative;
+z-index: 10; /* لضمان ظهور الرقم فوق الطبقات الأخرى */
+font-size: 22px;
+color: black;
 }
 
 
 .gallery {
-    padding: 20px;
-    background: #fff;
-    margin: 20px auto;
-    max-width: 800px;
-    border-radius: 10px;
+  padding: 20px;
+  background: #fff;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 10px;
 }
 
 .gallery h3 {
-    text-align: center;
+  text-align: center;
 }
 
 .gallery .images {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 .gallery img {
-    max-width: 200px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .search-bar {
-  display: flex;
-  align-items: center;
+display: flex;
+align-items: center;
 }
 
 .search-bar input {
-  padding: 5px;
-  font-size: 16px;
-  margin-right: 5px;
+padding: 5px;
+font-size: 16px;
+margin-right: 5px;
 }
 
 .search-bar button {
-  padding: 6px 10px;
-  font-size: 16px;
-  background-color: #000000;
-  color: white;
-  border: none;
-  cursor: pointer;
+padding: 6px 10px;
+font-size: 16px;
+background-color: #000000;
+color: white;
+border: none;
+cursor: pointer;
 }
 
 .search-bar button:hover {
-  background-color: #000000;
+background-color: #000000;
 }
 
 .comics-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
 }
 
 .comic-item {
-  width: 200px;
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  text-align: center;
-  padding: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease-in-out;
+width: 200px;
+background-color: white;
+border: 1px solid #ccc;
+border-radius: 10px;
+text-align: center;
+padding: 10px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+transition: transform 0.2s ease-in-out;
 }
 
 .comic-item:hover {
-  transform: scale(1.05);
+transform: scale(1.05);
 }
 
 .comic-item img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 10px;
+width: 100%;
+border-radius: 10px;
+margin-bottom: 10px;
 }
 
 .comic-item a {
-  text-decoration: none;
-  color: #000000;
-  font-size: 16px;
-  font-weight: bold;
+text-decoration: none;
+color: #000000;
+font-size: 16px;
+font-weight: bold;
 }
 
 .comic-item a:hover {
-  text-decoration: underline;
+text-decoration: underline;
 }
 
 .pagination {
-  display: flex;
-  justify-content: right;
-  margin-top: 20px;
+display: flex;
+justify-content: right;
+margin-top: 20px;
 }
 
 .pagination button {
-  padding: 10px 20px;
-  margin: 0 5px;
-  font-size: 16px;
-  background-color: #000000;
-  color: white;
-  border: none;
-  cursor: pointer;
+padding: 10px 20px;
+margin: 0 5px;
+font-size: 16px;
+background-color: #000000;
+color: white;
+border: none;
+cursor: pointer;
 }
 
 .pagination button:hover {
-  background-color: #535353;
+background-color: #535353;
 }
 
 footer {
-  background-color: #222;
-  color: #fff;
-  padding: 10px;
-  position:relative;
-  bottom: 0;
-  width: 100%;
+background-color: #222;
+color: #fff;
+padding: 10px;
+position:relative;
+bottom: 0;
+width: 100%;
+}
+
+/* تصميم متجاوب */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #222;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 20px;
+  }
+
+  section h2 {
+    font-size: 20px;
+  }
+
+  section p {
+    font-size: 14px;
+  }
 }

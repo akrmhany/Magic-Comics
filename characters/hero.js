@@ -82,3 +82,27 @@ function prevPage() {
 
 // تحديث أولي
 updatePagination();
+
+function createPagination(totalPages) {
+    const pagination = document.getElementById("pagination");
+    pagination.innerHTML = ""; // Clear existing buttons
+    for (let i = 1; i <= totalPages; i++) {
+      const button = document.createElement("button");
+      button.textContent = i;
+      button.onclick = () => {
+        state.currentPage = i;
+        updatePagination();
+      };
+      if (i === state.currentPage) {
+        button.classList.add("active");
+      }
+      pagination.appendChild(button);
+    }
+  }
+  
+  document.addEventListener("DOMContentLoaded", updatePagination);
+  
+  function toggleMenu() {
+    const navLinks = document.getElementById("nav-links");
+    navLinks.classList.toggle("show");
+  }

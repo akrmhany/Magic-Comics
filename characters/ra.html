@@ -8,13 +8,17 @@
 </head>
 <body>
     <header>
-        <nav>
-            <h1>Magic-Comics</h1>
-              <a href="/home.html">الرئيسية</a>
-              <a href="/characters/CH.html">الشخصيات</a>
-              <a href="comics.html">الكوميكس</a>
-              <a href="movies.html">الأفلام</a>
-        </nav>
+      <h1>Magic-Comics</h1>
+      <nav>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <ul id="nav-links">
+          <li><a href="/home.html">الرئيسية</a></li>
+          <li><a href="/characters/CH.html">الشخصيات</a></li>
+          <li><a href="#comics">الكوميكس</a></li>
+          <li><a href="#movies">الأفلام</a></li>
+          <li><a href="#shop">المتجر</a></li>
+        </ul>
+      </nav>
     </header>
 
     <section class="hero">
@@ -28,7 +32,6 @@
     </section>
 
     <div class="container">
-      <h3>التفاصيل</h3>
       <div class="character-details">
           <p><strong>الطول:</strong> 182 سم</p>
           <p><strong>الوزن:</strong> 80 كجم</p>
@@ -42,7 +45,8 @@
           <p><strong>الهوية:</strong> سرية</p>
           <p><strong>القدرات:</strong> قدرات مستمدة من الآلهة المصرية القديمة تحوت، سيت, أنوبيس, حورس, رع</p>
           <p><strong>الانتماء للمجموعه:</strong>ا</p>
-      </div>
+      </div>  
+      <h3>التفاصيل</h3>
   </div>
 
     <section id="abilities" class="stats">
@@ -74,16 +78,12 @@
           </div>                   
     </section>
 
-    <div class="comics-section" style="display: flex;
-    flex-wrap: wrap;
-    justify-content: right;">
+    <div class="comics-section">
       <div class="search-bar">
         <input type="text" id="search" placeholder="بحث عن قصة برقمها أو اسمها...">
         <button onclick="searchComic()">بحث</button>
     </div>
-      <div class="comics-grid" id="comics-grid" style="display: flex;
-      flex-wrap: wrap;
-      justify-content: right; flex-direction: row-reverse;">
+      <div class="comics-grid" id="comics-grid">
           <!-- Comic 1 -->
           <div class="comic-item" data-title="ولادة رع" data-id="1">
               <img src="photos/cover1.JPG" alt="غلاف القصة الأولى">
