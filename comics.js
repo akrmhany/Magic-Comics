@@ -50,34 +50,6 @@ function prevPage() {
     }
 }
 
-// 3. عرض أحدث الأعمال
-function displayLatestWorks() {
-    const allComics = Array.from(document.querySelectorAll(".comic-item"));
-    const latestWorksContainer = document.getElementById("latest-works");
-
-    const sortedComics = allComics.sort((a, b) => {
-        return new Date(b.getAttribute("data-date")) - new Date(a.getAttribute("data-date"));
-    });
-
-    latestWorksContainer.innerHTML = "";
-    sortedComics.slice(0, 3).forEach(comic => {
-        latestWorksContainer.appendChild(comic.cloneNode(true));
-    });
-}
-
-// 4. عرض الأعمال قيد التنفيذ
-function displayInProgress() {
-    const inProgressContainer = document.getElementById("in-progress");
-    const comics = document.querySelectorAll(".comic-item");
-
-    inProgressContainer.innerHTML = "";
-    comics.forEach(comic => {
-        if (comic.getAttribute("data-status") === "in-progress") {
-            inProgressContainer.appendChild(comic.cloneNode(true));
-        }
-    });
-}
-
 // 5. تهيئة الصفحة عند التحميل
 document.addEventListener("DOMContentLoaded", () => {
     updatePagination();
