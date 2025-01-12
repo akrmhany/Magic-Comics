@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الكوميكس - Magic Comics</title>
+  <link rel="stylesheet" href="comics.css">
+</head>
+<body>
+  <header>
+    <h1>Magic-Comics - الكوميكس</h1>
+    <nav>
+      <a href="home.html">الرئيسية</a>
+      <a href="characters.html">الشخصيات</a>
+      <a href="comics.html" class="active">الكوميكس</a>
+      <a href="movies.html">الأفلام</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- قسم أحدث الأعمال -->
+    <section id="latest-comics">
+      <h2>أحدث الأعمال</h2>
+      <div class="comics-grid">
+        <div class="comic-item">
+          <img src="photos/latest1.jpg" alt="غلاف القصة الأولى">
+          <a href="latest1.html">القصة الأولى: ولادة رع</a>
+        </div>
+        <div class="comic-item">
+          <img src="photos/latest2.jpg" alt="غلاف القصة الثانية">
+          <a href="latest2.html">القصة الثانية: معركة مع أنوبيس</a>
+        </div>
+        <div class="comic-item">
+          <img src="photos/latest3.jpg" alt="غلاف القصة الثالثة">
+          <a href="latest3.html">القصة الثالثة: انتقام تحوت</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم جميع الأعمال -->
+    <section id="all-comics">
+      <h2>جميع الأعمال</h2>
+      <div class="search-bar">
+        <input type="text" id="search-bar" placeholder="بحث عن قصة برقمها أو اسمها...">
+        <button onclick="filterComics()">بحث</button>
+      </div>
+      <div class="comics-grid" id="all-comics-grid">
+        <!-- يتم إدراج جميع القصص هنا ديناميكيًا -->
+        <div class="comic-item">
+          <img src="photos/comic1.jpg" alt="غلاف القصة 1">
+          <a href="comic1.html">القصة 1: اسم القصة</a>
+        </div>
+        <div class="comic-item">
+          <img src="photos/comic2.jpg" alt="غلاف القصة 2">
+          <a href="comic2.html">القصة 2: اسم القصة</a>
+        </div>
+        <div class="comic-item">
+          <img src="photos/comic3.jpg" alt="غلاف القصة 3">
+          <a href="comic3.html">القصة 3: اسم القصة</a>
+        </div>
+        <!-- أضف المزيد حسب الحاجة -->
+      </div>
+      <nav class="pagination">
+        <button onclick="prevPage()">السابق</button>
+        <button onclick="nextPage()">التالي</button>
+      </nav>
+    </section>
+
+    <!-- قسم الأعمال غير المكتملة -->
+    <section id="in-progress">
+      <h2>الأعمال قيد التنفيذ</h2>
+      <div class="comics-grid">
+        <div class="comic-item">
+          <img src="photos/inprogress1.jpg" alt="غلاف القصة الأولى قيد التنفيذ">
+          <p>القصة الأولى: عنوان القصة</p>
+        </div>
+        <div class="comic-item">
+          <img src="photos/inprogress2.jpg" alt="غلاف القصة الثانية قيد التنفيذ">
+          <p>القصة الثانية: عنوان القصة</p>
+        </div>
+        <div class="comic-item">
+          <img src="photos/inprogress3.jpg" alt="غلاف القصة الثالثة قيد التنفيذ">
+          <p>القصة الثالثة: عنوان القصة</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Magic-Comics</p>
+  </footer>
+
+  <script src="comics.js"></script>
+</body>
+</html>
