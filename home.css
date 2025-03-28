@@ -8,6 +8,87 @@ body {
   color: #333;
 }
 
+.news-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: #000;
+  color: white;
+}
+
+.slider-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  opacity: 0.8;
+}
+
+.slide-content {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.slide-content h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.slide-content p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.btn {
+  text-decoration: none;
+  background-color: #e62429;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #ff4531;
+}
+
+/* Pagination */
+.pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+}
+
+.pagination div {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.pagination div.active {
+  opacity: 1;
+}
+
+
 /* الرأسية */
 header {
   background: #222;
