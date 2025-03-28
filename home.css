@@ -12,8 +12,8 @@ body {
   width: 100%;
   overflow: hidden;
   position: relative;
-  background-color: #000;
-  color: white;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
 }
 
 .slider-container {
@@ -28,7 +28,7 @@ body {
 }
 
 .slide img {
-  width: 100%;
+  width: 50%;
   height: auto;
   opacity: 0.8;
 }
