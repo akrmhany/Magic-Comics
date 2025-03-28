@@ -134,6 +134,7 @@ button:hover {
 
 .character-card:hover {
   transform: scale(1.05);
+  background: #444;
 }
 
 footer {
