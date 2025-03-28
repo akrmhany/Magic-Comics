@@ -8,47 +8,46 @@ body {
   color: #333;
 }
 
-.news-slider {
+.swiper-container {
   width: 100%;
-  overflow: hidden;
+  height: 100vh;
   position: relative;
-  background-color: #000000;
-  color: rgb(255, 255, 255);
+  background-color: #000;
 }
 
-.slider-container {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-  min-width: 100%;
+.swiper-slide {
+  position: relative;
   text-align: center;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 
-.slide img {
-  width: 50%;
+.swiper-slide img {
+  width: 100%;
   height: auto;
   opacity: 0.8;
 }
 
 .slide-content {
   position: absolute;
-  bottom: 10%;
+  bottom: 15%;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
+  z-index: 10;
 }
 
 .slide-content h3 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 10px;
 }
 
 .slide-content p {
-  font-size: 1rem;
-  margin-bottom: 15px;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
 }
 
 .btn {
@@ -63,29 +62,6 @@ body {
 
 .btn:hover {
   background-color: #ff4531;
-}
-
-/* Pagination */
-.pagination {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 5px;
-}
-
-.pagination div {
-  width: 10px;
-  height: 10px;
-  background-color: white;
-  border-radius: 50%;
-  opacity: 0.5;
-  cursor: pointer;
-}
-
-.pagination div.active {
-  opacity: 1;
 }
 
 

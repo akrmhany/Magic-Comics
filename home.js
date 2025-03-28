@@ -45,28 +45,19 @@ document.querySelectorAll(".dropdown-toggle").forEach(button => {
     navLinks.classList.toggle("show");
   }
   
-  const slides = document.querySelector('.slider-container');
-const paginationDots = document.querySelectorAll('.pagination div');
-let currentIndex = 0;
-
-function updateSlider() {
-  const width = slides.offsetWidth;
-  slides.style.transform = `translateX(-${currentIndex * width}px)`;
-  paginationDots.forEach((dot, index) => {
-    dot.classList.toggle('active', index === currentIndex);
+  const swiper = new Swiper('.swiper-container', {
+    loop: true, // لجعل السلايدر يعمل بشكل دائري
+    autoplay: {
+      delay: 5000, // تغيير الشريحة كل 5 ثوانٍ
+      disableOnInteraction: false, // استمرارية التشغيل التلقائي حتى بعد التفاعل
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
   });
-}
-
-function nextSlide() {
-  currentIndex = (currentIndex + 1) % paginationDots.length;
-  updateSlider();
-}
-
-setInterval(nextSlide, 5000); // Change slide every 5 seconds
-
-paginationDots.forEach((dot, index) => {
-  dot.addEventListener('click', () => {
-    currentIndex = index;
-    updateSlider();
-  });
-});
+  
