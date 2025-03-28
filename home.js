@@ -49,7 +49,7 @@ document.querySelectorAll(".dropdown-toggle").forEach(button => {
     loop: true, // لجعل السلايدر يعمل بشكل دائري
     autoplay: {
       delay: 5000, // تغيير الشريحة كل 5 ثوانٍ
-      disableOnInteraction: false, // استمرارية التشغيل التلقائي حتى بعد التفاعل
+      disableOnInteraction: true, // استمرارية التشغيل التلقائي حتى بعد التفاعل
     },
     pagination: {
       el: '.swiper-pagination',
