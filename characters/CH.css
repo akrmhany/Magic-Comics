@@ -160,6 +160,14 @@ footer {
     left: 0;
   }
 
+  .character-card {
+    width: 90px; /* عرض ثابت */
+    height: 200px; /* ارتفاع ثابت */
+  }
+  .character-card img {
+    width: 90%; /* يجعل الصورة بعرض البطاقة */
+    height: 100px; /* ارتفاع ثابت للصورة */
+  }
   nav ul.show {
     display: flex;
   }
@@ -173,26 +181,6 @@ footer {
   }
 }
 
-.character-card {
-  width: 90px; /* عرض ثابت */
-  height: 200px; /* ارتفاع ثابت */
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  overflow: hidden; /* للتأكد من عدم خروج المحتوى */
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 10px;
-  background-color: #f9f9f9;
-}
-
-.character-card img {
-  width: 90%; /* يجعل الصورة بعرض البطاقة */
-  height: 100px; /* ارتفاع ثابت للصورة */
-  object-fit: cover; /* لضبط الصورة بحيث تملأ المساحة دون تشويه */
-  border-radius: 5px;
-}
 
 @media (max-width: 480px) {
   header h1 {
