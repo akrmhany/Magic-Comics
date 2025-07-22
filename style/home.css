@@ -8,63 +8,6 @@ body {
   color: #333;
 }
 
-.swiper-container {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  background-color: #000;
-}
-
-.swiper-slide {
-  position: relative;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-}
-
-.swiper-slide img {
-  width: 50%;
-  height: auto;
-  opacity: 0.8;
-}
-
-.slide-content {
-  position: absolute;
-  bottom: 15%;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  z-index: 10;
-}
-
-.slide-content h3 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.slide-content p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-.btn {
-  text-decoration: none;
-  background-color: #e62429;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.btn:hover {
-  background-color: #ff4531;
-}
-
-
 /* الرأسية */
 header {
   background: #222;
