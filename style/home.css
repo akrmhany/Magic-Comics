@@ -76,10 +76,13 @@ section p {
 
 /* التذييل */
 footer {
-  background: #222;
+  background-color: #222;
   color: #fff;
   text-align: center;
-  padding: 10px 0;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
 /* تصميم متجاوب */
