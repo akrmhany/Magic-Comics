@@ -45,19 +45,3 @@ document.querySelectorAll(".dropdown-toggle").forEach(button => {
     navLinks.classList.toggle("show");
   }
   
-  const swiper = new Swiper('.swiper-container', {
-    loop: true, // لجعل السلايدر يعمل بشكل دائري
-    autoplay: {
-      delay: 5000, // تغيير الشريحة كل 5 ثوانٍ
-      disableOnInteraction: true, // استمرارية التشغيل التلقائي حتى بعد التفاعل
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
-  
