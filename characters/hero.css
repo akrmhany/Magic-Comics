@@ -326,3 +326,7 @@ width: 100%;
     font-size: 14px;
   }
 }
+
+.comic-item {
+  width: 100px; 
+}
