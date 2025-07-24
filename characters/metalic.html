@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شخصية رع - Magic Comics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="website icon" href="photos/logo.png" type="png">
+    <link rel="stylesheet" href="hero.css">
+</head>
+<body>
+    <header>
+      <h1>Magic-Comics</h1>
+      <nav>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <ul id="nav-links">
+          <li><a href="../index.html">الرئيسية</a></li>
+          <li><a href="../CH.html">الشخصيات</a></li>
+          <li><a href="../comics.html">الكوميكس</a></li>
+          <li><a href="#movies">الأفلام</a></li>
+          <li><a href="#shop">المتجر</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+        <img src="photos/ra-img.jpg" alt="شخصية رع">
+        <div class="hero-info">
+            <h2>رع</h2>
+            <p>رع هو شخصية ملحمية معروف بقدرته المستمده من الاله المصريه القديمه . يُعتبر رمزًا للعدالة في مواجهة الظلام.</p>
+            <button id="toggle-story">عرض القصة الكاملة</button>
+            <p id="story" style="display:none;">كان رع حاميًا للأرض، وواجه أعداءً أقوياء باستخدام قواه النارية وقدرته على تحويل الظلام إلى نور.</p>
+        </div>
+    </section>
+
+    <div class="container">
+      <div class="character-details">
+          <p><strong>الطول:</strong> 182 سم</p>
+          <p><strong>الوزن:</strong> 80 كجم</p>
+          <p><strong>العين:</strong> أسود</p>
+          <p><strong>الشعر:</strong> أسود</p>
+          <p><strong>الجنس:</strong> رجل</p>
+          <p><strong>الكون:</strong> Magic Comics Universe X101</p>
+          <p><strong>الأسماء:</strong> يوسف، رع</p>
+          <p><strong>التعليم:</strong> طالب جامعي كليه الاثار</p>
+          <p><strong>مكان المنشأ:</strong> مصر</p>
+          <p><strong>الهوية:</strong> سرية</p>
+          <p><strong>القدرات:</strong> قدرات مستمدة من الآلهة المصرية القديمة تحوت، سيت, أنوبيس, حورس, رع</p>
+          <p><strong>الانتماء للمجموعه:</strong>ا</p>
+      </div>  
+      <h3>التفاصيل</h3>
+  </div>
+
+    <section id="abilities" class="stats">
+        <div class="stats">
+            <div class="stat">
+              <div class="circle" data-value="9"><span>9</span></div>
+              <p>المتانه</p>
+            </div>
+            <div class="stat">
+              <div class="circle" data-value="1111"><span>؟؟؟</span></div>
+              <p>الطاقه</p>
+            </div>
+            <div class="stat">
+              <div class="circle" data-value="6"><span>6</span></div>
+              <p>المهرات القتاليه</p>
+            </div>
+            <div class="stat">
+              <div class="circle" data-value="7"><span>7</span></div>
+              <p>الذكاء</p>
+            </div>
+            <div class="stat">
+              <div class="circle" data-value="5"><span>5</span></div>
+              <p>السرعه</p>
+            </div>
+            <div class="stat">
+              <div class="circle" data-value="6"><span>6</span></div>
+              <p>القوه</p>
+            </div>
+          </div>                   
+    </section>
+
+    <div class="comics-section">
+      <div class="search-bar">
+        <input type="text" id="search" placeholder="بحث عن قصة برقمها أو اسمها...">
+        <button onclick="searchComic()">بحث</button>
+    </div>
+      <div class="comics-grid" id="comics-grid">
+          <!-- Comic 1 -->
+          <div class="comic-item" data-title="ولادة رع" data-id="1">
+              <img src="photos/cover1.JPG" alt="غلاف القصة الأولى">
+              <a href="comic1.html">القصة الأولى: ولادة رع</a>
+          </div>
+          <!-- Comic 2 -->
+          <div class="comic-item" data-title="معركة مع أنوبيس" data-id="2">
+              <img src="comic2.png" alt="غلاف القصة الثانية">
+              <a href="comic2.html">القصة الثانية: معركة مع أنوبيس</a>
+          </div>
+          <!-- Comic 3 -->
+          <div class="comic-item" data-title="انتقام تحوت" data-id="3">
+              <img src="comic3.png" alt="غلاف القصة الثالثة">
+              <a href="comic3.html">القصة الثالثة: انتقام تحوت</a>
+          </div>
+          <div class="comic-item" data-title="انتقام تحوت" data-id="3">
+            <img src="comic3.png" alt="غلاف القصة الثالثة">
+            <a href="comic3.html">القصة الثالثة: انتقام تحوت</a>
+        </div>
+        <div class="comic-item" data-title="انتقام تحوت" data-id="3">
+          <img src="comic3.png" alt="غلاف القصة الثالثة">
+          <a href="comic3.html">القصة الثالثة: انتقام تحوت</a>
+      </div>
+      <div class="comic-item" data-title="انتقام تحوت" data-id="3">
+        <img src="comic3.png" alt="غلاف القصة الثالثة">
+        <a href="comic3.html">القصة الثالثة: انتقام تحوت</a>
+    </div>
+    <div class="comic-item" data-title="انتقام تحوت" data-id="3">
+      <img src="comic3.png" alt="غلاف القصة الثالثة">
+      <a href="comic3.html">القصة الثالثة: انتقام تحوت</a>
+  </div>
+  <div class="comic-item" data-title="انتقام تحوت" data-id="3">
+    <img src="comic3.png" alt="غلاف القصة الثالثة">
+    <a href="comic3.html">القصة الثالثة: انتقام تحوت</a>
+</div>
+<div class="comic-item" data-title="انتقام تحوت" data-id="3">
+  <img src="comic3.png" alt="غلاف القصة الثالثة">
+  <a href="comic3.html">القصة الثالثة: انتقام تحوت</a>
+</div>
+<div class="comic-item" data-title="انتقام تحوت" data-id="3">
+  <img src="comic3.png" alt="غلاف القصة الثالثة">
+  <a href="comic3.html">القصة الثالثة: انتقام تحوت</a>
+</div>
+<div class="comic-item" data-title="انتقام تحوت" data-id="3">
+  <img src="comic3.png" alt="غلاف القصة الثالثة">
+  <a href="comic3.html">القصة العاشره: انتقام تحوت</a>
+</div>
+<div class="comic-item" data-title="انتقام تحوت" data-id="3">
+  <img src="comic3.png" alt="غلاف القصة الثالثة">
+  <a href="comic3.html">القصة الثالثة: انتقام تحوت</a>
+</div>
+<div class="comic-item" data-title="انتقام تحوت" data-id="3">
+  <img src="comic3.png" alt="غلاف القصة الثالثة">
+  <a href="comic3.html">القصة الثالثة: انتقام تحوت</a>
+</div>
+      </div>
+      <nav class="pagination">
+          <button onclick="prevPage()">السابق</button>
+          <button onclick="nextPage()">التالي</button>
+      </nav>
+  </div>
+
+    <section id="gallery" class="gallery">
+        <h3>المعرض</h3>
+        <div class="images">
+            <img src="image1.png" alt="صورة 1">
+            <img src="image2.png" alt="صورة 2">
+            <img src="image3.png" alt="صورة 3">
+        </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Magic-Comics</p>
+      
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=100075506846999#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+    </footer>
+
+    <script src="hero.js"></script>
+</body>
+</html>
