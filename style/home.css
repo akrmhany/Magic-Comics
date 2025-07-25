@@ -117,7 +117,7 @@ section p {
   border-radius: 10px;
   padding: 10px;
   display: flex;
-  gap: 15px;
+  gap: 30px;
   align-items: center;
   justify-content: space-between;
   min-height: 120px;
