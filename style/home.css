@@ -245,6 +245,21 @@ footer {
   }
 }
 
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 20px;
+  }
+
+  section h2 {
+    font-size: 20px;
+  }
+
+  section p {
+    font-size: 14px;
+  }
+}
+
 .container {
   grid-template-columns: 1fr;
   grid-template-areas:
@@ -266,19 +281,4 @@ footer {
 
 .buttons {
   justify-content: center;
-}
-
-
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 20px;
-  }
-
-  section h2 {
-    font-size: 20px;
-  }
-
-  section p {
-    font-size: 14px;
-  }
 }
