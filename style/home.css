@@ -59,6 +59,13 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
+.carousal img {
+  width: 50%;
+  height: 110%;
+  display: block;
+  margin: 0 auto;
+}
+
 /* الأقسام */
 section {
   padding: 20px;
@@ -135,4 +142,8 @@ footer {
   section p {
     font-size: 14px;
   }
+}
+
+.carousal button {
+  display: none;
 }
