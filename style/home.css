@@ -16,6 +16,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 header h1 {
@@ -59,12 +64,18 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
+/* علشان تسيب مساحة تحت الهيدر */
+#default-carousel {
+  margin-top: 80px; /* عدل الرقم حسب ارتفاع الهيدر الحقيقي */
+}
+
 .carousal {
   position: relative;
   width: 100%;
   max-width: 800px;
   margin: 20px auto;
   overflow: hidden;
+  padding-top: 60px;
 }
 
 .carousal img {
