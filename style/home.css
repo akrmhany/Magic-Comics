@@ -59,6 +59,14 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
+.carousal {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
 .carousal img {
   width: 50%;
   height: 110%;
@@ -117,6 +125,7 @@ footer {
     left: 0;
   }
 
+  
   nav ul.show {
     display: flex;
   }
@@ -142,8 +151,4 @@ footer {
   section p {
     font-size: 14px;
   }
-}
-
-.carousal button {
-  display: none;
 }
