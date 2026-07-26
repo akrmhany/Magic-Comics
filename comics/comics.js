@@ -21,7 +21,7 @@ const comicsPerPage = 6;
 
 function updatePagination() {
     const comics = document.querySelectorAll(".comic-item");
-    const totalPages = Math.ceil(comics.length / comicsPerPage);
+    const totalPages = Math.ceil(comics.length / comicsPerPage) || 1;
 
     comics.forEach((comic, index) => {
         comic.style.display =
@@ -36,7 +36,7 @@ function updatePagination() {
 }
 
 function nextPage() {
-    const totalPages = Math.ceil(document.querySelectorAll(".comic-item").length / comicsPerPage);
+    const totalPages = Math.ceil(document.querySelectorAll(".comic-item").length / comicsPerPage) || 1;
     if (currentPage < totalPages) {
         currentPage++;
         updatePagination();
@@ -50,11 +50,34 @@ function prevPage() {
     }
 }
 
+function displayLatestWorks() {
+    const latestWorksContainer = document.getElementById("latest-works");
+    if (!latestWorksContainer) return;
+
+    latestWorksContainer.innerHTML = `
+        <div class="comic-item"
+             data-title="ميتاليك#1"
+             data-id="1"
+             data-date="none"
+             data-status="published">
+            <img src="comics/photos/metalc_poster.jpg" alt="غلاف القصة الأولى">
+            <a href="comic1.html">ميتاليك #1</a>
+        </div>
+    `;
+}
+
+function displayInProgress() {
+    const inProgressContainer = document.getElementById("in-progress");
+    if (!inProgressContainer) return;
+
+    inProgressContainer.innerHTML = "";
+}
+
 // 5. تهيئة الصفحة عند التحميل
 document.addEventListener("DOMContentLoaded", () => {
-    updatePagination();
     displayLatestWorks();
     displayInProgress();
+    updatePagination();
 });
 
 function toggleMenu() {
