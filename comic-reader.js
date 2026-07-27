@@ -105,11 +105,11 @@ function renderComic() {
     }
 
     if (start + burstSize < 50) {
-      setTimeout(nextBurst, 15);
+      setTimeout(nextBurst, 150);
     }
   };
 
-  setTimeout(nextBurst, 10);
+  setTimeout(nextBurst, 120);
 }
 
 scrollTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
@@ -137,7 +137,7 @@ if (startPage > 0) {
   setTimeout(() => {
     const pageEl = document.querySelector(`[data-page="${startPage}"]`);
     if (pageEl) pageEl.scrollIntoView({ behavior: "smooth", block: "start" });
-  }, 400);
+  }, 40);
 }
 
 function toggleMenu() {
