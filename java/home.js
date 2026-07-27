@@ -1,19 +1,3 @@
-function toggleMenu() {
-  const navLinks = document.getElementById("nav-links");
-  navLinks.classList.toggle("show");
-
-  const isOpen = navLinks.classList.contains("show");
-  document.body.classList.toggle("menu-open", isOpen);
-}
-
-window.addEventListener("resize", () => {
-  if (window.innerWidth > 768) {
-    const navLinks = document.getElementById("nav-links");
-    navLinks.classList.remove("show");
-    document.body.classList.remove("menu-open");
-  }
-});
-
 let lastScroll = 0;
 const navbar = document.querySelector("header");
 
@@ -35,6 +19,32 @@ searchButton.addEventListener("click", () => {
   alert(`نتائج البحث عن: ${query}`);
   // هنا يمكنك إضافة كود لعرض النتائج
 });
+
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+  sections.forEach((section) => {
+    const rect = section.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom >= 0) {
+      section.classList.add("visible");
+    } else {
+      section.classList.remove("visible");
+    }
+  });
+});
+
+document.querySelectorAll(".dropdown-toggle").forEach(button => {
+    button.addEventListener("click", () => {
+      const dropdown = button.nextElementSibling;
+      dropdown.classList.toggle("show");
+    });
+  });
+  
+  function toggleMenu() {
+    const navLinks = document.getElementById("nav-links");
+    navLinks.classList.toggle("show");
+  }
+  });
 
 const sections = document.querySelectorAll("section");
 
