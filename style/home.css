@@ -90,56 +90,51 @@ nav ul li a:hover {
   padding-bottom: 40px;
 }
 
-.hero-carousel {
-  max-width: 1100px;
-  margin: 20px auto 12px;
-  padding: 0 16px;
+/* علشان تسيب مساحة تحت الهيدر */
+#default-carousel {
+  margin-top: 80px; /* عدل الرقم حسب ارتفاع الهيدر الحقيقي */
 }
 
-.carousel-track {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 10px;
-}
-
-.carousel-track img {
+.carousal {
+  position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 14px;
-  border: 1px solid var(--border);
-  background: var(--surface);
+  max-width: 800px;
+  margin: 20px auto;
+  overflow: hidden;
+  padding-top: 60px;
+}
+
+.carousal img {
+  width: 50%;
+  height: 110%;
+  display: block;
+  margin: 0 auto;
 }
 
 /* الأقسام */
-.home-section {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 16px 20px;
+section {
+  padding: 20px;
   text-align: right;
-  box-sizing: border-box;
 }
 
-.home-section h2 {
+section h2 {
   font-size: 24px;
-  margin: 0 0 10px;
+  margin-bottom: 10px;
 }
 
-.home-section p {
+section p {
   font-size: 16px;
-  color: var(--muted);
-  margin: 0;
 }
 
 .container {
-  max-width: 1100px;
-  margin: 10px auto 0;
-  padding: 0 16px 16px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-  box-sizing: border-box;
-}
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  grid-template-areas:
+    "card1 card2"
+    "card3 card3"
+    "card4 card4";
+  }
 
 .card {
   min-height: 220px;
