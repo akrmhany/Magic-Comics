@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="قارئ كوميكس احترافي لموقع Magic-Comics">
+  <meta name="theme-color" content="#111111">
+  <meta property="og:title" content="Magic-Comics | قارئ الكوميكس">
+  <meta property="og:description" content="اقرأ الكوميكس بطريقة عمودية وسريعة على Magic-Comics.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Magic-Comics | قارئ الكوميكس</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="website icon" href="characters/photos/logo.png" type="png">
+  <link rel="stylesheet" href="style/home.css">
+  <link rel="stylesheet" href="comic-reader.css">
+</head>
+<body>
+  <header class="main-header">
+    <h1>Magic-Comics</h1>
+    <nav>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <ul id="nav-links">
+        <li><a href="index.html">الرئيسيه</a></li>
+        <li><a href="comics.html">الكوميكس</a></li>
+        <li><a href="CH.html">الشخصيات</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="reader-page">
+    <section class="reader-hero">
+      <div>
+        <p class="reader-kicker">Magic-Comics</p>
+        <h2 id="comic-title">ميتاليك #1</h2>
+        <p id="comic-subtitle">قارئ عمودي سريع — الغلاف ثم الصفحات بالترتيب</p>
+      </div>
+      <div class="reader-actions">
+        <a class="reader-btn" href="comics.html">الرجوع للكوميكس</a>
+        <button class="reader-btn secondary" id="scroll-top-btn" type="button">للأعلى</button>
+      </div>
+    </section>
+
+    <section class="reader-status" id="reader-status" aria-live="polite">جارِ تحميل الصفحات...</section>
+
+    <section id="comic-reader" class="comic-reader" aria-label="قارئ الكوميكس"></section>
+  </main>
+
+  <div id="image-modal" class="image-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <button class="modal-close" id="modal-close" type="button" aria-label="إغلاق">×</button>
+    <img id="modal-image" alt="عرض مكبر للصفحة">
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Magic-Comics</p>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/profile.php?id=100075506846999#" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/magic_comics7?igsh=MTg3b3dkdmQ1c3k0bw==" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+    </div>
+  </footer>
+
+  <script src="comic-reader.js"></script>
+</body>
+</html>
