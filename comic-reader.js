@@ -2,9 +2,6 @@ const comicId = new URLSearchParams(window.location.search).get("id") || "metali
 const comicTitleMap = {
   metalic: "ميتاليك #1"
 };
-const totalPagesMap = {
-  metalic: 32
-};
 
 const reader = document.getElementById("comic-reader");
 const readerStatus = document.getElementById("reader-status");
@@ -18,7 +15,6 @@ comicTitle.textContent = comicTitleMap[comicId] || comicId;
 document.title = `Magic-Comics | ${comicTitle.textContent}`;
 
 const startPage = Number(localStorage.getItem(`magic-comics-${comicId}-last-page`) || 0);
-const totalPages = totalPagesMap[comicId] ?? 32;
 let lastVisiblePage = startPage;
 
 function openModal(src, alt) {
@@ -56,8 +52,15 @@ function makePage(pageNumber) {
   });
 
   img.addEventListener("error", () => {
+    const numericPage = Number(img.dataset.page);
+    if (numericPage === 0) {
+      readerStatus.textContent = "تعذر تحميل الغلاف";
+      wrapper.remove();
+      return;
+    }
+
     wrapper.remove();
-    readerStatus.textContent = `اكتمل تحميل العدد حتى الصفحة ${Math.max(0, pageNumber - 1)}`;
+    readerStatus.textContent = `اكتمل تحميل العدد حتى الصفحة ${Math.max(0, numericPage - 1)}`;
   });
 
   img.addEventListener("click", () => openModal(img.src, img.alt));
@@ -71,9 +74,41 @@ function renderComic() {
   reader.innerHTML = "";
   readerStatus.textContent = "جارِ تحميل الصفحات...";
 
-  for (let page = 0; page <= totalPages; page++) {
-    reader.appendChild(makePage(page));
-  }
+  let page = 0;
+  const maxProbe = 500;
+
+  const probeNext = () => {
+    if (page > maxProbe) {
+      readerStatus.textContent = "تم الوصول للحد الأقصى للفحص";
+      return;
+    }
+
+    const pageEl = makePage(page);
+    reader.appendChild(pageEl);
+
+    const img = pageEl.querySelector("img");
+    const onLoad = () => {
+      img.removeEventListener("load", onLoad);
+      img.removeEventListener("error", onError);
+      page += 1;
+      probeNext();
+    };
+
+    const onError = () => {
+      img.removeEventListener("load", onLoad);
+      img.removeEventListener("error", onError);
+      if (page === 0) {
+        readerStatus.textContent = "تعذر تحميل الغلاف";
+      } else {
+        readerStatus.textContent = `اكتمل تحميل العدد حتى الصفحة ${page - 1}`;
+      }
+    };
+
+    img.addEventListener("load", onLoad);
+    img.addEventListener("error", onError);
+  };
+
+  probeNext();
 }
 
 scrollTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
@@ -87,11 +122,11 @@ window.addEventListener("keydown", (event) => {
 });
 
 renderComic();
-if (startPage > 0) {
+if (lastVisiblePage > 0) {
   setTimeout(() => {
-    const pageEl = document.querySelector(`[data-page="${startPage}"]`);
+    const pageEl = document.querySelector(`[data-page="${lastVisiblePage}"]`);
     if (pageEl) pageEl.scrollIntoView({ behavior: "smooth", block: "start" });
-  }, 300);
+  }, 500);
 }
 
 function toggleMenu() {
