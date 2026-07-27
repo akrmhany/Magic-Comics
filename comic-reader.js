@@ -104,12 +104,12 @@ function renderComic() {
       return;
     }
 
-    if (start + burstSize < 500) {
-      setTimeout(nextBurst, 180);
+    if (start + burstSize < 50) {
+      setTimeout(nextBurst, 15);
     }
   };
 
-  setTimeout(nextBurst, 120);
+  setTimeout(nextBurst, 10);
 }
 
 scrollTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
