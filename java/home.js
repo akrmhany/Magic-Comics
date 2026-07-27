@@ -1,47 +1,15 @@
-let lastScroll = 0;
-const navbar = document.querySelector("header");
+function toggleMenu() {
+  const navLinks = document.getElementById("nav-links");
+  navLinks.classList.toggle("show");
 
-window.addEventListener("scroll", () => {
-  const currentScroll = window.pageYOffset;
-  if (currentScroll > lastScroll) {
-    navbar.style.top = "-80px"; // أخفي الشريط
-  } else {
-    navbar.style.top = "0"; // أظهر الشريط
-  }
-  lastScroll = currentScroll;
-});
+  const isOpen = navLinks.classList.contains("show");
+  document.body.classList.toggle("menu-open", isOpen);
+}
 
-const searchInput = document.querySelector("#search-input");
-const searchButton = document.querySelector("#search-button");
-
-searchButton.addEventListener("click", () => {
-  const query = searchInput.value.toLowerCase();
-  alert(`نتائج البحث عن: ${query}`);
-  // هنا يمكنك إضافة كود لعرض النتائج
-});
-
-const sections = document.querySelectorAll("section");
-
-window.addEventListener("scroll", () => {
-  sections.forEach((section) => {
-    const rect = section.getBoundingClientRect();
-    if (rect.top < window.innerHeight && rect.bottom >= 0) {
-      section.classList.add("visible");
-    } else {
-      section.classList.remove("visible");
-    }
-  });
-});
-
-document.querySelectorAll(".dropdown-toggle").forEach(button => {
-    button.addEventListener("click", () => {
-      const dropdown = button.nextElementSibling;
-      dropdown.classList.toggle("show");
-    });
-  });
-  
-  function toggleMenu() {
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 768) {
     const navLinks = document.getElementById("nav-links");
-    navLinks.classList.toggle("show");
+    navLinks.classList.remove("show");
+    document.body.classList.remove("menu-open");
   }
-  
+});
