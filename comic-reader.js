@@ -33,15 +33,15 @@ function closeModal() {
 function makePage(pageNumber) {
   const wrapper = document.createElement("div");
   wrapper.className = "comic-page";
+  wrapper.dataset.page = String(pageNumber);
 
   const skeleton = document.createElement("div");
   skeleton.className = "page-skeleton";
 
   const img = document.createElement("img");
-  img.loading = "lazy";
+  img.loading = "eager";
   img.decoding = "async";
   img.alt = pageNumber === 0 ? `${comicTitle.textContent} - الغلاف` : `${comicTitle.textContent} - صفحة ${pageNumber}`;
-  img.dataset.page = String(pageNumber);
   img.src = `comics/${comicId}/${pageNumber}.jpg`;
 
   img.addEventListener("load", () => {
@@ -52,7 +52,7 @@ function makePage(pageNumber) {
   });
 
   img.addEventListener("error", () => {
-    const numericPage = Number(img.dataset.page);
+    const numericPage = pageNumber;
     if (numericPage === 0) {
       readerStatus.textContent = "تعذر تحميل الغلاف";
       wrapper.remove();
@@ -74,41 +74,14 @@ function renderComic() {
   reader.innerHTML = "";
   readerStatus.textContent = "جارِ تحميل الصفحات...";
 
-  let page = 0;
   const maxProbe = 500;
+  const fragment = document.createDocumentFragment();
 
-  const probeNext = () => {
-    if (page > maxProbe) {
-      readerStatus.textContent = "تم الوصول للحد الأقصى للفحص";
-      return;
-    }
+  for (let page = 0; page <= maxProbe; page++) {
+    fragment.appendChild(makePage(page));
+  }
 
-    const pageEl = makePage(page);
-    reader.appendChild(pageEl);
-
-    const img = pageEl.querySelector("img");
-    const onLoad = () => {
-      img.removeEventListener("load", onLoad);
-      img.removeEventListener("error", onError);
-      page += 1;
-      probeNext();
-    };
-
-    const onError = () => {
-      img.removeEventListener("load", onLoad);
-      img.removeEventListener("error", onError);
-      if (page === 0) {
-        readerStatus.textContent = "تعذر تحميل الغلاف";
-      } else {
-        readerStatus.textContent = `اكتمل تحميل العدد حتى الصفحة ${page - 1}`;
-      }
-    };
-
-    img.addEventListener("load", onLoad);
-    img.addEventListener("error", onError);
-  };
-
-  probeNext();
+  reader.appendChild(fragment);
 }
 
 scrollTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
