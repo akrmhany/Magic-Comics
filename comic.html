@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,25 +10,25 @@
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <title>Magic-Comics | قارئ الكوميكس</title>
-  <link rel="icon" href="characters/photos/logo.png" type="image/png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="website icon" href="characters/photos/logo.png" type="png">
   <link rel="stylesheet" href="style/home.css">
-  <link rel="stylesheet" href="style/comic-reader.css">
+  <link rel="stylesheet" href="comic-reader.css">
 </head>
 <body>
-  <header class="main-header" role="banner">
+  <header class="main-header">
     <h1>Magic-Comics</h1>
-    <nav role="navigation" aria-label="القائمة الرئيسية">
-      <button class="menu-toggle" id="menu-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="قائمة التنقل">☰</button>
-      <ul id="nav-links" class="nav-links">
-        <li><a href="index.html">الرئيسية</a></li>
+    <nav>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <ul id="nav-links">
+        <li><a href="index.html">الرئيسيه</a></li>
         <li><a href="comics.html">الكوميكس</a></li>
         <li><a href="CH.html">الشخصيات</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="reader-page" role="main">
+  <main class="reader-page">
     <section class="reader-hero">
       <div>
         <p class="reader-kicker">Magic-Comics</p>
@@ -37,32 +37,30 @@
       </div>
       <div class="reader-actions">
         <a class="reader-btn" href="comics.html">الرجوع للكوميكس</a>
-        <button class="reader-btn secondary" id="scroll-top-btn" type="button" aria-label="انتقل للأعلى">للأعلى</button>
+        <button class="reader-btn secondary" id="scroll-top-btn" type="button">للأعلى</button>
       </div>
     </section>
 
-    <section class="reader-status" id="reader-status" aria-live="polite" aria-atomic="true">جارِ تحميل الصفحات...</section>
+    <section class="reader-status" id="reader-status" aria-live="polite">جارِ تحميل الصفحات...</section>
 
-    <section id="comic-reader" class="comic-reader" aria-label="قارئ الكوميكس" role="region"></section>
+    <section id="comic-reader" class="comic-reader" aria-label="قارئ الكوميكس"></section>
   </main>
 
-  <div id="image-modal" class="image-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <button class="modal-close" id="modal-close" type="button" aria-label="إغلاق الصورة">×</button>
-    <div class="modal-content">
-      <img id="modal-image" alt="عرض مكبر للصفحة">
-    </div>
+  <div id="image-modal" class="image-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <button class="modal-close" id="modal-close" type="button" aria-label="إغلاق">×</button>
+    <img id="modal-image" alt="عرض مكبر للصفحة">
   </div>
 
-  <footer role="contentinfo">
+  <footer>
     <p>&copy; 2024 Magic-Comics</p>
     <div class="social-icons">
-      <a href="https://www.facebook.com/profile.php?id=100075506846999#" target="_blank" rel="noopener noreferrer" aria-label="فيسبوك"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="تويتر"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-      <a href="https://www.instagram.com/magic_comics7" target="_blank" rel="noopener noreferrer" aria-label="انستغرام"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-      <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="يوتيوب"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=100075506846999#" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/magic_comics7?igsh=MTg3b3dkdmQ1c3k0bw==" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
     </div>
   </footer>
 
-  <script src="java/comic-reader.js" defer></script>
+  <script src="comic-reader.js"></script>
 </body>
-</html>
+                                  </html>
