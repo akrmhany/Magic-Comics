@@ -60,8 +60,8 @@ function displayLatestWorks() {
              data-id="1"
              data-date="none"
              data-status="published">
-            <img src="comics/photos/metalc_poster.jpg" alt="غلاف القصة الأولى">
-            <a href="comic1.html">ميتاليك #1</a>
+            <a href="comic.html"><img src="comics/photos/metalc_poster.jpg" alt="غلاف القصة الأولى">
+ميتاليك #1</a>
         </div>
     `;
 }
