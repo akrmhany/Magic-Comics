@@ -183,3 +183,8 @@ body {
     width: 100%;
   }
 }
+
+    .menu-toggle {
+      display: block;
+    }
+  }
