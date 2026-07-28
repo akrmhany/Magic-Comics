@@ -1,0 +1,13 @@
+{
+  "comics": [
+    {
+      "id": "metalic",
+      "title": "ميتاليك #1",
+      "folder": "comics/metalic",
+      "pages": 32,
+      "cover": 0,
+      "description": "العدد الأول من سلسلة ميتاليك",
+      "thumbnail": "comics/metalic/0.jpg"
+    }
+  ]
+}
