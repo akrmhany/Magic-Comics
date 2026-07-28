@@ -46,7 +46,7 @@ function makePage(pageNumber) {
   img.decoding = "async";
   img.alt = pageNumber === 0 ? `${comicTitle.textContent} - الغلاف` : `${comicTitle.textContent} - صفحة ${pageNumber}`;
   img.dataset.page = String(pageNumber);
-  img.src = `comics/${comicId}/${pageNumber}.jpg`;
+  img.src = `comics/${comicId}/${pageNumber}.webp`;
 
   img.addEventListener("load", () => {
     wrapper.classList.add("is-loaded");
