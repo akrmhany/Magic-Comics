@@ -6,6 +6,31 @@ const totalPagesMap = {
   metalic: 32
 };
 
+  // Header hide on scroll (throttled via rAF)
+  (function headerScroll(){
+    const header = qs('.main-header');
+    if(!header) return;
+    let lastScroll = window.pageYOffset || 0;
+    let ticking = false;
+
+    function onScroll(){
+      if(!ticking){
+        window.requestAnimationFrame(()=>{
+          const current = window.pageYOffset || 0;
+          if(current > lastScroll + 10){
+            header.style.transform = 'translateY(-100%)';
+          } else if(current < lastScroll - 10){
+            header.style.transform = 'translateY(0)';
+          }
+          lastScroll = current;
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }
+    window.addEventListener('scroll', onScroll, {passive:true});
+  })();
+
 const reader = document.getElementById("comic-reader");
 const readerStatus = document.getElementById("reader-status");
 const comicTitle = document.getElementById("comic-title");
