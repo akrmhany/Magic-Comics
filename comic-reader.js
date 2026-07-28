@@ -98,3 +98,15 @@ function toggleMenu() {
   const navLinks = document.getElementById("nav-links");
   navLinks.classList.toggle("show");
 }
+
+  // Toggle mobile menu
+  (function mobileMenu(){
+    const toggle = qs('#menu-toggle');
+    const nav = qs('#nav-links');
+    if(!toggle || !nav) return;
+    toggle.addEventListener('click', ()=>{
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('show');
+    });
+  })();
