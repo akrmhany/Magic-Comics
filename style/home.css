@@ -205,11 +205,17 @@ nav{display:flex;align-items:center}
 }
 
 .home-comic-item{
-  width:200px;
+  width:180px;
+  padding:8px;
 }
 
 .home-comic-item a{
   color:#333;
+  font-size:15px;
+}
+
+.home-comic-item img{
+  margin-bottom:8px;
 }
 
 .home-comic-item p{
@@ -264,6 +270,8 @@ footer{background:var(--surface);color:var(--accent);text-align:center;padding:1
   
   .container{gap:12px;padding:0 8px}
   .comic-item{width:min(100%, 320px)}
+  .home-comic-item{width:160px;padding:7px}
+  .home-comic-item a{font-size:14px}
 }
 
 /* Utility */
