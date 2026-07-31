@@ -1,86 +1,81 @@
-// 1. البحث عن قصة
+const comicsPerPage = 6;
+let currentPage = 1;
+
 function searchComics() {
-    const searchInput = document.getElementById("search-bar").value.toLowerCase();
-    const comics = document.querySelectorAll(".comic-item");
+  const input = document.getElementById('search-bar');
+  const query = (input?.value || '').trim().toLowerCase();
+  const comics = document.querySelectorAll('.comic-item');
 
-    comics.forEach(comic => {
-        const title = comic.getAttribute("data-title").toLowerCase();
-        const id = comic.getAttribute("data-id");
+  comics.forEach((comic) => {
+    const title = (comic.getAttribute('data-title') || '').toLowerCase();
+    const id = (comic.getAttribute('data-id') || '').toLowerCase();
+    const match = !query || title.includes(query) || id.includes(query);
+    comic.style.display = match ? '' : 'none';
+  });
 
-        if (title.includes(searchInput) || id.includes(searchInput)) {
-            comic.style.display = "block";
-        } else {
-            comic.style.display = "none";
-        }
-    });
+  currentPage = 1;
+  updatePagination();
 }
 
-// 2. إدارة التنقل بين الصفحات
-let currentPage = 1;
-const comicsPerPage = 6;
+function getVisibleComics() {
+  return Array.from(document.querySelectorAll('.comic-item')).filter((comic) => comic.style.display !== 'none');
+}
 
 function updatePagination() {
-    const comics = document.querySelectorAll(".comic-item");
-    const totalPages = Math.ceil(comics.length / comicsPerPage) || 1;
+  const comics = getVisibleComics();
+  const totalPages = Math.max(1, Math.ceil(comics.length / comicsPerPage));
 
-    comics.forEach((comic, index) => {
-        comic.style.display =
-            index >= (currentPage - 1) * comicsPerPage &&
-            index < currentPage * comicsPerPage
-                ? "block"
-                : "none";
-    });
+  comics.forEach((comic, index) => {
+    comic.style.display = index >= (currentPage - 1) * comicsPerPage && index < currentPage * comicsPerPage ? '' : 'none';
+  });
 
-    document.getElementById("prev-button").disabled = currentPage === 1;
-    document.getElementById("next-button").disabled = currentPage === totalPages;
+  const prev = document.getElementById('prev-button');
+  const next = document.getElementById('next-button');
+  if (prev) prev.disabled = currentPage <= 1;
+  if (next) next.disabled = currentPage >= totalPages;
 }
 
 function nextPage() {
-    const totalPages = Math.ceil(document.querySelectorAll(".comic-item").length / comicsPerPage) || 1;
-    if (currentPage < totalPages) {
-        currentPage++;
-        updatePagination();
-    }
+  const totalPages = Math.max(1, Math.ceil(getVisibleComics().length / comicsPerPage));
+  if (currentPage < totalPages) {
+    currentPage += 1;
+    updatePagination();
+  }
 }
 
 function prevPage() {
-    if (currentPage > 1) {
-        currentPage--;
-        updatePagination();
-    }
+  if (currentPage > 1) {
+    currentPage -= 1;
+    updatePagination();
+  }
 }
 
 function displayLatestWorks() {
-    const latestWorksContainer = document.getElementById("latest-works");
-    if (!latestWorksContainer) return;
+  const latestWorksContainer = document.getElementById('latest-works');
+  if (!latestWorksContainer) return;
 
-    latestWorksContainer.innerHTML = `
-        <div class="comic-item"
-             data-title="ميتاليك#1"
-             data-id="1"
-             data-date="none"
-             data-status="published">
-            <a href="comic.html"><img src="comics/photos/metalc_poster.jpg" alt="غلاف القصة الأولى">
-ميتاليك #1</a>
-        </div>
-    `;
+  latestWorksContainer.innerHTML = `
+    <div class="comic-item" data-title="ميتاليك #1" data-id="1" data-date="none" data-status="published">
+      <a href="../comic.html?id=metalic"><img src="comics/photos/metalc_poster.jpg" alt="غلاف القصة الأولى">ميتاليك #1</a>
+    </div>
+  `;
 }
 
 function displayInProgress() {
-    const inProgressContainer = document.getElementById("in-progress");
-    if (!inProgressContainer) return;
-
-    inProgressContainer.innerHTML = "";
+  const inProgressContainer = document.getElementById('in-progress');
+  if (!inProgressContainer) return;
+  inProgressContainer.innerHTML = '';
 }
 
-// 5. تهيئة الصفحة عند التحميل
-document.addEventListener("DOMContentLoaded", () => {
-    displayLatestWorks();
-    displayInProgress();
-    updatePagination();
-});
-
 function toggleMenu() {
-    const navLinks = document.getElementById("nav-links");
-    navLinks.classList.toggle("show");
-  }
+  const navLinks = document.getElementById('nav-links');
+  const menuButton = document.querySelector('.menu-toggle');
+  const isOpen = navLinks?.classList.toggle('show');
+  if (menuButton) menuButton.setAttribute('aria-expanded', String(Boolean(isOpen)));
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  displayLatestWorks();
+  displayInProgress();
+  updatePagination();
+});
