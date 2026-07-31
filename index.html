@@ -22,32 +22,24 @@
     </nav>
   </header>
 
-  <!-- Carousel: احتفظت بتركيب الـ Carousel الحالي لكن نظفت الكود وأضفت سمات الأداء -->
   <div id="default-carousel" class="carousal" data-carousel="slide" aria-roledescription="carousel">
-    <!-- Carousel wrapper -->
     <div class="relative h-56 overflow-hidden rounded-lg md:h-96 carousel-track">
-         <!-- Item 1 (أول صورة لها fetchpriority=high) -->
-        <div class="carousel-item" data-carousel-item aria-hidden="false">
+         <div class="carousel-item" data-carousel-item aria-hidden="false">
             <img src="characters/photos/logo.png" width="1200" height="600" loading="eager" fetchpriority="high" decoding="async" class="carousel-image" alt="شعار Magic-Comics">
         </div>
-        <!-- Item 2 -->
         <div class="carousel-item" data-carousel-item aria-hidden="true">
             <img src="characters/photos/metalc_poster.jpg" width="1200" height="600" loading="lazy" decoding="async" class="carousel-image" alt="ملصق ميتاليك">
         </div>
-        <!-- Item 3 -->
         <div class="carousel-item" data-carousel-item aria-hidden="true">
             <img src="characters/photos/shadow.png" width="1200" height="600" loading="lazy" decoding="async" class="carousel-image" alt="شخصية الظل">
         </div>
-        <!-- Item 4 -->
         <div class="carousel-item" data-carousel-item aria-hidden="true">
             <img src="characters/photos/avadol-removebg.png" width="1200" height="600" loading="lazy" decoding="async" class="carousel-image" alt="أفادول">
         </div>
-        <!-- Item 5 -->
         <div class="carousel-item" data-carousel-item aria-hidden="true">
             <img src="characters/photos/ra-img.jpg" width="1200" height="600" loading="lazy" decoding="async" class="carousel-image" alt="را">
         </div>
     </div>
-    <!-- Slider indicators -->
     <div class="carousel-indicators" role="tablist" aria-label="مؤشرات الشرائح">
         <button type="button" class="indicator" aria-current="true" aria-label="الشريحة 1" data-carousel-slide-to="0"></button>
         <button type="button" class="indicator" aria-current="false" aria-label="الشريحة 2" data-carousel-slide-to="1"></button>
@@ -55,7 +47,6 @@
         <button type="button" class="indicator" aria-current="false" aria-label="الشريحة 4" data-carousel-slide-to="3"></button>
         <button type="button" class="indicator" aria-current="false" aria-label="الشريحة 5" data-carousel-slide-to="4"></button>
     </div>
-    <!-- Slider controls -->
     <button type="button" class="carousel-control prev" aria-label="الشريحة السابقة" data-carousel-prev>
         <span aria-hidden="true">‹</span>
     </button>
@@ -67,12 +58,48 @@
   <main>
     <section id="characters" class="home-section" aria-labelledby="characters-heading">
       <h2 id="characters-heading">الشخصيات</h2>
-      <p>معلومات عن الشخصيات...</p>
+      <div class="container">
+        <article class="card card-wide">
+          <div class="image">
+            <img src="characters/photos/metalc_poster.jpg" alt="ميتاليك" loading="lazy" decoding="async" width="400" height="400">
+          </div>
+          <div class="text">
+            <h3>ميتاليك (Metalic)</h3>
+            <p>
+              الشخصية الوحيدة المرسومة حاليًا في المشروع. تمثل البداية البصرية لعالم Magic-Comics،
+              وسيتم البناء عليها لاحقًا عند إضافة شخصيات جديدة.
+            </p>
+            <div class="buttons">
+              <a class="btn blue" href="CH.html">عرض صفحة الشخصيات</a>
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
 
     <section id="comics" class="home-section" aria-labelledby="comics-heading">
       <h2 id="comics-heading">الكوميكس</h2>
-      <p>معلومات عن الكوميكس...</p>
+      <div class="container">
+        <article class="card card-wide">
+          <div class="text">
+            <h3>ميتاليك #1</h3>
+            <p>
+              العدد الأول المتوفر حاليًا داخل الموقع. يمكنك قراءته مباشرة عبر القارئ العمودي الجديد،
+              وهو العدد الوحيد المنشور حاليًا.
+            </p>
+            <p>
+              تأليف ورسم: محمود إبراهيم<br>
+              إصدار عام: 2026
+            </p>
+            <div class="buttons">
+              <a class="btn blue" href="comic.html?id=metalic">قراءة العدد</a>
+            </div>
+          </div>
+          <div class="image">
+            <img src="characters/photos/metalc_poster.jpg" alt="غلاف ميتاليك #1" loading="lazy" decoding="async" width="400" height="400">
+          </div>
+        </article>
+      </div>
     </section>
 
     <div class="container">
@@ -100,7 +127,7 @@
         </div>
         <div class="text">
           <h3>ميتاليك #1</h3>
-          <p>اقرأ العدد الأول من السلسلة الآن داخل قارئ الكوميكس الجديد.</p>
+          <p>العدد الأول المنشور حاليًا داخل القارئ العمودي.</p>
           <div class="buttons">
             <a class="btn blue" href="comic.html?id=metalic">عرض</a>
           </div>
