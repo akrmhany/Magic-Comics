@@ -56,7 +56,7 @@ function displayLatestWorks() {
 
   latestWorksContainer.innerHTML = `
     <div class="comic-item" data-title="ميتاليك #1" data-id="1" data-date="none" data-status="published">
-      <a href="../comic.html?id=metalic"><img src="comics/photos/metalc_poster.jpg" alt="غلاف القصة الأولى">ميتاليك #1</a>
+      <a href="comic.html?id=metalic"><img src="comics/photos/metalc_poster.jpg" alt="غلاف القصة الأولى">ميتاليك #1</a>
     </div>
   `;
 }
