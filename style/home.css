@@ -156,6 +156,66 @@ nav{display:flex;align-items:center}
 .btn.blue{background:var(--primary-color)}
 .btn.blue:hover{background:#1e4d7b}
 
+/* Comic-item style to match comics.html */
+.comics-grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  justify-content:center;
+}
+
+.comic-item{
+  width:200px;
+  background-color:#fff;
+  border:1px solid #ccc;
+  border-radius:10px;
+  text-align:center;
+  padding:10px;
+  box-shadow:0 2px 5px rgba(0,0,0,0.1);
+  transition:transform 0.2s ease-in-out;
+}
+
+.comic-item:hover{
+  transform:scale(1.05);
+}
+
+.comic-item img{
+  width:100%;
+  height:auto;
+  border-radius:10px;
+  margin-bottom:10px;
+}
+
+.comic-item a{
+  display:block;
+  text-decoration:none;
+  color:#333;
+  font-size:16px;
+  font-weight:bold;
+}
+
+.comic-item a:hover{
+  color:#555;
+}
+
+.comic-item p{
+  margin:10px 0 0;
+  color:#333;
+  font-size:14px;
+}
+
+.home-comic-item{
+  width:min(340px, 100%);
+}
+
+.home-comic-item a{
+  color:#333;
+}
+
+.home-comic-item .comic-caption{
+  margin-top:8px;
+}
+
 /* Footer */
 footer{background:var(--surface);color:var(--accent);text-align:center;padding:18px 8px;border-top:1px solid rgba(255,255,255,0.03)}
 .social-icons{margin-top:8px}
@@ -203,6 +263,7 @@ footer{background:var(--surface);color:var(--accent);text-align:center;padding:1
   .card{padding:10px;gap:8px;min-height:100px}
   
   .container{gap:12px;padding:0 8px}
+  .comic-item{width:min(100%, 320px)}
 }
 
 /* Utility */
