@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,16 +11,16 @@
   <meta name="twitter:card" content="summary_large_image">
   <title>Magic-Comics | قارئ الكوميكس</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="website icon" href="characters/photos/logo.png" type="png">
+  <link rel="icon" href="characters/photos/logo.png" type="image/png">
   <link rel="stylesheet" href="style/home.css">
   <link rel="stylesheet" href="comic-reader.css">
 </head>
 <body>
   <header class="main-header">
-    <h1>Magic-Comics</h1>
-    <nav>
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-      <ul id="nav-links">
+    <h1 class="site-title">Magic-Comics</h1>
+    <nav aria-label="القائمة الرئيسية">
+      <button class="menu-toggle" onclick="toggleMenu()" aria-controls="nav-links" aria-expanded="false">☰</button>
+      <ul id="nav-links" class="nav-links">
         <li><a href="index.html">الرئيسيه</a></li>
         <li><a href="comics.html">الكوميكس</a></li>
         <li><a href="CH.html">الشخصيات</a></li>
