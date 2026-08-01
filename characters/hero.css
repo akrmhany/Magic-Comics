@@ -179,19 +179,20 @@ color: black;
 }
 
 .gallery .images {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
   align-items: stretch;
 }
 
 .gallery img {
   width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: block;
+  background: #fff;
 }
 
 .search-bar {
@@ -331,26 +332,6 @@ footer {
   .stats {
     flex-direction: column;
     align-items: center;
-  }
-
-  .gallery .images {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 520px) {
-  .gallery {
-    padding: 14px;
-    margin: 14px auto;
-    border-radius: 8px;
-  }
-
-  .gallery .images {
-    grid-template-columns: 1fr;
-  }
-
-  .comic-item {
-    width: min(100%, 320px);
   }
 }
 
