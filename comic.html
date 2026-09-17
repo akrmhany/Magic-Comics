@@ -21,6 +21,10 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'AW-18456379346');
+    gtag('event', 'comic_reader_view', {
+      page_type: 'comic_reader',
+      comic_id: new URLSearchParams(window.location.search).get('id') || 'metalic'
+    });
   </script>
 </head>
 <body>
